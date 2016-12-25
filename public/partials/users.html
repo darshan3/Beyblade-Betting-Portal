@@ -1,0 +1,38 @@
+
+<div>
+<label>Bet1 </label> <br>
+<select ng-model = "bet1.value">
+  <option data-ng-repeat = "i in range" value="{{i}}" >{{i}}</option>
+</select>
+</div>
+
+
+<div>
+<label> Bet2 </label> <br>
+<select ng-model = "bet2.value" ng-click = >
+ <option data-ng-repeat = "i in range" value="{{i}}" >{{i}}</option>
+</select>
+</div>
+
+
+<div>
+<label> Bet3 </label> <br>
+<select ng-model = "bet3.value" ng-click = >
+ <option data-ng-repeat = "i in range" value="{{i}}" >{{i}}</option>
+</select>
+</div>
+
+
+<div>
+<label> Bet4 </label> <br> 
+<select ng-model = "bet4.value" ng-click = >
+ <option data-ng-repeat = "i in range" value="{{i}}" >{{i}}</option>
+</select>
+</div>
+<br>
+
+<div> 
+<button type="button" class="btn btn-primary" ng-click = "submit()" ng-valid = "bet1.value +bet2.value +bet3.value +bet4.value <= user.points">Submit</button>
+</div>
+
+

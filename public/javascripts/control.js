@@ -5,6 +5,10 @@ app.config(['$routeProvider', function($routeProvider){
             templateUrl: 'partials/admin.html',
             controller: 'AdminCtrl',
         })
+        .when('/users', {
+            templateUrl: 'partials/users.html',
+            controller: 'UsersCtrl',
+        })
         .otherwise({
             redirectTo: '/'
         });
@@ -28,6 +32,15 @@ app.controller('AdminCtrl', ['$scope', '$resource', '$location',
         };
 
         
+    }]);
+app.controller('UsersCtrl', ['$scope', '$resource', '$location', 
+    function($scope,$resource,$location){
+        var range = [];
+         for(var i=10;i<=100;i++)
+             range.push(i);
+        $scope.range = range;
+        console.log($scope.bet1);
+
     }]);
 
 app.controller('AddUserCtrl', ['$scope', '$resource', '$location',
